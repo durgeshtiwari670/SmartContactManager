@@ -1,0 +1,185 @@
+body{
+	background: #e2e2e2 !important;;
+}
+
+.bg-primary{
+	background: #009688 !important;
+}
+
+.banner{
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../images/banner.webp);
+	background-size: cover;
+	color: white;
+}
+
+.my-card{
+	padding: 20px;
+	background-color: #ffffff;
+}
+
+#login {
+    margin-top: 50px;
+}
+
+#login-box {  
+    max-width: 400px;
+    border: 1px solid #9C9C9C;
+    background-color: #fff;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#login-form .btn {
+    width: 100%; /* Adjusted width */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #009688; /* Removed !important */
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#login-form .btn:hover {
+    background-color: #018578; /* Removed !important */
+}
+
+#register-link {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.text-info {
+    color: #17a2b8;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-group .btn {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.button-group #register-link {
+    flex: 1;
+    text-align: right;
+    margin-left: 5px;
+}
+
+/* Side Bar Style start */
+
+.sidebar{
+    width: 18%;
+    background: white;
+    height: 100%;
+    position: fixed;
+    padding-top: 45px;
+    z-index: 99999999999999999999999999999999999;
+}
+
+.sidebar a{
+    display:block;
+    width: 100%;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: gray;
+}
+
+.sidebar a:hover{
+    background: #e2e2e2;
+}
+
+.sidebar .divider{
+    height: .5px;
+    width: 100%;
+    background: #e2e2e2;
+    margin-top: 10%;
+}
+
+@media only screen and (max-width : 600px){
+    .sidebar{
+        display: none;
+        width: 80% !important;
+        background: white;
+        height: 100vh;
+        position: fixed;
+        padding-top: 20px;
+    }
+
+    .content{
+        margin-left: 0% !important;
+    }
+}
+
+.sidebar .item i {
+    margin-right: 10px; /* Adjust the margin between icon and text */
+}
+.content{
+    margin-left: 20%;
+    width: 82%;
+}
+
+.sidebar .crossbtn{
+    position: absolute;
+    top: 0;
+    right: 35px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* styling show contact images  */
+.my_profile_picture{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
