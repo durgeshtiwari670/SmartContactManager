@@ -1,44 +1,59 @@
-<!doctype html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}
-">
-
+<!doctype html> 
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title th:text="${title}">Smart Contact Manager</title>
+    <title th:text="${title}">Smart Contact Manager - Admin Login</title>
+    
+    <!-- Additional Meta Tags for SEO -->
+    <meta name="description" content="Admin Login - Smart Contact Manager">
+    <meta name="keywords" content="admin, login, contact manager, CRM">
+    <meta name="author" content="Smart Contact Manager Admin">
 </head>
 
 <body>
     <section id="login">
-        <div class="container">
+        <div class="container mt-5">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
+                    <div id="login-box" class="col-md-12 p-4 border rounded shadow-sm">
                         <form id="login-form" class="form" th:action="@{/signin}" method="post">
-                            <h3 class="text-center text-info">Login</h3>
+                            <h3 class="text-center text-info mb-4">Admin Login</h3>
+                            
+                            <!-- Error Alert -->
                             <div th:if="${param.error}" class="alert alert-danger">
-                                Invalid username and password
+                                Invalid username or password.
                             </div>
+                            
+                            <!-- Logout Alert -->
                             <div th:if="${param.logout}" class="alert alert-success">
-                                You have been logout
+                                You have been successfully logged out.
                             </div>
+                            
+                            <!-- Username Field -->
                             <div class="form-group">
-                                <label for="username" class="text-info">Username:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
+                                <label for="username" class="text-info">Username:</label>
+                                <input type="text" name="username" id="username" class="form-control" required autocomplete="off" aria-label="Username">
                             </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Password:</label><br>
-                                <input type="password" name="password" id="password" class="form-control">
+                            
+                            <!-- Password Field -->
+                            <div class="form-group mt-3">
+                                <label for="password" class="text-info">Password:</label>
+                                <input type="password" name="password" id="password" class="form-control" required autocomplete="off" aria-label="Password">
                             </div>
-                            <div class="form-group">
+                            
+                            <!-- Remember Me Checkbox -->
+                            <div class="form-group mt-3">
                                 <label for="remember-me" class="text-info">
-                                    <input id="remember-me" name="remember-me" type="checkbox">
+                                    <input id="remember-me" name="remember-me" type="checkbox" aria-label="Remember Me">
                                     <span>Remember me</span>
                                 </label>
                             </div>
-                            <div class="form-group button-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Submit">
-                                <div id="register-link" class="text-right">
+                            
+                            <!-- Submit Button and Register Link -->
+                            <div class="form-group button-group mt-4 d-flex justify-content-between">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Login">
+                                <div id="register-link" class="text-end">
                                     <a href="/signup" class="text-info">Register here</a>
                                 </div>
                             </div>
@@ -48,5 +63,15 @@
             </div>
         </div>
     </section>
+
+    <!-- Additional Styles for Padding and Layout -->
+    <style>
+        #login-box {
+            background-color: #fff;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
 </body>
 </html>

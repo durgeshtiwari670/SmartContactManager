@@ -17,7 +17,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+//import lombok.ToString;
 
 @Entity
 @Table(name = "USER")
